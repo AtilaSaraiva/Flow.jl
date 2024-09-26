@@ -14,41 +14,9 @@ function checkFileExists(path, sha256sum)
     end
 end
 
-# function runIfChanged(path::String, codeBlock::Expr)
-    # # Define the hash file path
-    # hash_file = path * ".hash"
-
-    # # Check if hash file exists
-    # if isfile(hash_file)
-        # # Read the saved hash
-        # saved_hash = read(hash_file, String)
-
-        # # Check if the file exists and hash matches
-        # if checkFileExists(path, saved_hash)
-            # return
-        # end
-    # end
-
-    # runPost = quote
-        # # Compute new hash and save it
-        # new_hash = open(path) do io
-            # io |> sha256 |> bytes2hex
-        # end
-        # open($hash_file, "w") do io
-            # write(io, new_hash)
-        # end
-    # end
-
-    # fullExpr = Expr(:block, esc(codeBlock), runPost)
-
-    # fullExprWithPath = postwalk(x -> x == :path ? path : x, fullExpr)
-
-    # return fullExprWithPath
-# end
-
 function flow(path::Expr, expr::Expr)
     return quote
-       filePath = $(path.args[2])
+       filePath = $(esc(path.args[2]))
        hash_file = filePath * ".hash"
        # Check if hash file exists
        flag = true
