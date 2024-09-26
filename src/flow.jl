@@ -15,6 +15,7 @@ function checkFileExists(path, sha256sum)
 end
 
 function flow(path::Expr, expr::Expr)
+    newExpr = postwalk(x -> x == :path ? path.args[2] : x, expr)
     return quote
        filePath = $(esc(path.args[2]))
        hash_file = filePath * ".hash"
@@ -31,7 +32,7 @@ function flow(path::Expr, expr::Expr)
        end
 
        if flag
-           $(esc(expr))
+           $(esc(newExpr))
 
            # Compute new hash and save it
            new_hash = open(filePath) do io
