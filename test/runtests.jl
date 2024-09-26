@@ -4,10 +4,12 @@ using Test
 @testset "Flow.jl" begin
     counter = 1
 
+    path = "this should not change"
+
     filePath, _ = mktemp()
     @flow path=filePath begin
         counter += 1
-        write(filePath, "oi1")
+        write(path, "oi1")
     end
 
     @flow path=filePath begin
@@ -18,4 +20,5 @@ using Test
     rm(filePath * ".hash")
 
     @test counter == 2
+    @test path == "this should not change"
 end
