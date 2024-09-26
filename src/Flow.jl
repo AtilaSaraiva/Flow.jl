@@ -1,5 +1,10 @@
 module Flow
 
-# Write your package code here.
+using SHA: sha256
+using MacroTools: prewalk, postwalk
+
+include("flow.jl")
+
+export @flow
 
 end
