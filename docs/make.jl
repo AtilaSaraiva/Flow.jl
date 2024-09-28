@@ -1,14 +1,14 @@
-using Flow
+using FlowLock
 using Documenter
 
-DocMeta.setdocmeta!(Flow, :DocTestSetup, :(using Flow); recursive=true)
+DocMeta.setdocmeta!(FlowLock, :DocTestSetup, :(using FlowLock); recursive=true)
 
 makedocs(;
-    modules=[Flow],
+    modules=[FlowLock],
     authors="Átila Saraiva Quintela Soares",
-    sitename="Flow.jl",
+    sitename="FlowLock.jl",
     format=Documenter.HTML(;
-        canonical="https://AtilaSaraiva.github.io/Flow.jl",
+        canonical="https://AtilaSaraiva.github.io/FlowLock.jl",
         edit_link="main",
         assets=String[],
     ),
@@ -18,6 +18,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/AtilaSaraiva/Flow.jl",
+    repo="github.com/AtilaSaraiva/FlowLock.jl",
     devbranch="main",
 )

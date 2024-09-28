@@ -1,16 +1,16 @@
-# Flow
+# FlowLock
 
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://AtilaSaraiva.github.io/Flow.jl/stable/)
-[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://AtilaSaraiva.github.io/Flow.jl/dev/)
-[![Build Status](https://github.com/AtilaSaraiva/Flow.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/AtilaSaraiva/Flow.jl/actions/workflows/CI.yml?query=branch%3Amain)
-[![Coverage](https://codecov.io/gh/AtilaSaraiva/Flow.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/AtilaSaraiva/Flow.jl)
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://AtilaSaraiva.github.io/FlowLock.jl/stable/)
+[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://AtilaSaraiva.github.io/FlowLock.jl/dev/)
+[![Build Status](https://github.com/AtilaSaraiva/FlowLock.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/AtilaSaraiva/FlowLock.jl/actions/workflows/CI.yml?query=branch%3Amain)
+[![Coverage](https://codecov.io/gh/AtilaSaraiva/FlowLock.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/AtilaSaraiva/FlowLock.jl)
 
 This packages provides a macro called `@flow` that wraps a piece of code that creates a file and only runs the code if the file is missing or changed.
 
 Here is a snippet of how it works:
 
 ```julia
-julia> using Flow
+julia> using FlowLock
 
 julia> filePath, _ = mktemp();
 

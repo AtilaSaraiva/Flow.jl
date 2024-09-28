@@ -1,7 +1,7 @@
-using Flow
+using FlowLock
 using Test
 
-@testset "Flow.jl" begin
+@testset "FlowLock.jl" begin
     counter = 1
 
     path = "this should not change"

@@ -1,4 +1,4 @@
-module Flow
+module FlowLock
 
 using SHA: sha256
 using MacroTools: postwalk
