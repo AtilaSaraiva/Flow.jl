@@ -72,6 +72,6 @@ jobs:
         shell: julia --project=docs --color=yes {0}
         run: |
           using Documenter: DocMeta, doctest
-          using Flow
-          DocMeta.setdocmeta!(Flow, :DocTestSetup, :(using Flow); recursive=true)
-          doctest(Flow)
+          using FlowLock
+          DocMeta.setdocmeta!(FlowLock, :DocTestSetup, :(using FlowLock); recursive=true)
+          doctest(FlowLock)

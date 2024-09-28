@@ -1,14 +1,14 @@
 ```@meta
-CurrentModule = Flow
+CurrentModule = FlowLock
 ```
 
-# Flow
+# FlowLock
 
-Documentation for [Flow](https://github.com/AtilaSaraiva/Flow.jl).
+Documentation for [FlowLock](https://github.com/AtilaSaraiva/FlowLock.jl).
 
 ```@index
 ```
 
 ```@autodocs
-Modules = [Flow]
+Modules = [FlowLock]
 ```
